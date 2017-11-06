@@ -2283,6 +2283,39 @@ self.type.conformsTo(p.oclAsType(TypedElement).type)))</body>
         </ownedRule>
         <generalization xmi:type="uml:Generalization" xmi:id="Actor-_generalization.0" general="BehavioredClassifier" specific="Actor"/>
       </packagedElement>
+	  <packagedElement xmi:type="uml:Class" xmi:id="DataObject" name="DataObject">
+        <ownedComment xmi:type="uml:Comment" xmi:id="DataObject-_ownedComment.0" annotatedElement="DataObject">
+          <body>Data object is custom element</body>
+        </ownedComment>
+        <ownedRule xmi:type="uml:Constraint" xmi:id="DataObject-associations" name="associations" constrainedElement="DataObject" context="DataObject">
+          <ownedComment xmi:type="uml:Comment" xmi:id="DataObject-associations-_ownedComment.0" annotatedElement="DataObject-associations">
+            <body>An DataObject can only have Associations to UseCases, Components, and Classes. Furthermore these Associations must be binary.</body>
+          </ownedComment>
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="DataObject-associations-_specification">
+            <language>OCL</language>
+            <body>Association.allInstances()->forAll( a |
+  a.memberEnd->collect(type)->includes(self) implies
+  (
+    a.memberEnd->size() = 2 and
+    let dataObjectEnd : Property = a.memberEnd->any(type = self) in
+      dataObjectEnd.opposite.class.oclIsKindOf(UseCase) or
+      ( dataObjectEnd.opposite.class.oclIsKindOf(Class) and not
+         dataObjectEnd.opposite.class.oclIsKindOf(Behavior))
+      )
+  )</body>
+          </specification>
+        </ownedRule>
+        <ownedRule xmi:type="uml:Constraint" xmi:id="DataObject-must_have_name" name="must_have_name" constrainedElement="DataObject" context="DataObject">
+          <ownedComment xmi:type="uml:Comment" xmi:id="DataObject-must_have_name-_ownedComment.0" annotatedElement="DataObject-must_have_name">
+            <body>An DataObject must have a name.</body>
+          </ownedComment>
+          <specification xmi:type="uml:OpaqueExpression" xmi:id="DataObject-must_have_name-_specification">
+            <language>OCL</language>
+            <body>name->notEmpty()</body>
+          </specification>
+        </ownedRule>
+        <generalization xmi:type="uml:Generalization" xmi:id="DataObject-_generalization.0" general="BehavioredClassifier" specific="DataObject"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="Extend" name="Extend">
         <ownedComment xmi:type="uml:Comment" xmi:id="Extend-_ownedComment.0" annotatedElement="Extend">
           <body>A relationship from an extending UseCase to an extended UseCase that specifies how and when the behavior defined in the extending UseCase can be inserted into the behavior defined in the extended UseCase.</body>
