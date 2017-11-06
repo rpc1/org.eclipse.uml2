@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.uml2.license"
+      label="UML2 License"
+      version="1.0.0.qualifier"
+      provider-name="Eclipse Modeling Project">
+
+   <description>
+      License for Unified Modeling Language 2.x.
+   </description>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+</feature>

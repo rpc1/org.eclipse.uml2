@@ -1,0 +1,114 @@
+/*
+ * Copyright (c) 2005, 2007 IBM Corporation and others.
+ * All rights reserved.   This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *   IBM - initial API and implementation
+ *
+ * $Id: InitialNodeTest.java,v 1.3 2007/02/14 20:06:14 khussey Exp $
+ */
+package org.eclipse.uml2.uml.tests;
+
+import junit.textui.TestRunner;
+
+import org.eclipse.uml2.uml.InitialNode;
+import org.eclipse.uml2.uml.UMLFactory;
+
+/**
+ * <!-- begin-user-doc -->
+ * A test case for the model object '<em><b>Initial Node</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link org.eclipse.uml2.uml.InitialNode#validateNoIncomingEdges(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate No Incoming Edges</em>}</li>
+ *   <li>{@link org.eclipse.uml2.uml.InitialNode#validateControlEdges(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate Control Edges</em>}</li>
+ * </ul>
+ * </p>
+ * @generated
+ */
+public class InitialNodeTest
+		extends ControlNodeTest {
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static void main(String[] args) {
+		TestRunner.run(InitialNodeTest.class);
+	}
+
+	/**
+	 * Constructs a new Initial Node test case with the given name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InitialNodeTest(String name) {
+		super(name);
+	}
+
+	/**
+	 * Returns the fixture for this Initial Node test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected InitialNode getFixture() {
+		return (InitialNode) fixture;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#setUp()
+	 * @generated
+	 */
+	@Override
+	protected void setUp()
+			throws Exception {
+		setFixture(UMLFactory.eINSTANCE.createInitialNode());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#tearDown()
+	 * @generated
+	 */
+	@Override
+	protected void tearDown()
+			throws Exception {
+		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link org.eclipse.uml2.uml.InitialNode#validateNoIncomingEdges(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate No Incoming Edges</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.uml2.uml.InitialNode#validateNoIncomingEdges(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	public void testValidateNoIncomingEdges__DiagnosticChain_Map() {
+		// TODO: implement this feature getter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+	}
+
+	/**
+	 * Tests the '{@link org.eclipse.uml2.uml.InitialNode#validateControlEdges(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Validate Control Edges</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.uml2.uml.InitialNode#validateControlEdges(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	public void testValidateControlEdges__DiagnosticChain_Map() {
+		// TODO: implement this feature getter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+	}
+
+} //InitialNodeTest
